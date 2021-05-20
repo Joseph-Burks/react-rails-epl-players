@@ -6,7 +6,7 @@ const CardContainer = ({players, addLike}) => {
 	return (
 		<Card.Group>
 			{players.map(player => {
-				return <PlayerCard key={player.id} player={player} />;
+				return <PlayerCard key={player.id} player={player} addLike={addLike} />;
 			})}
 		</Card.Group>
 	);

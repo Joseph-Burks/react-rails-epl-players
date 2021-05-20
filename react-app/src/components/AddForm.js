@@ -5,7 +5,7 @@ export default class AddForm extends React.Component {
 	state = {
 		name: '',
 		position: '',
-		team: '',
+		team_id: '',
 		image: '',
 		likes: 0,
 	};
@@ -16,7 +16,8 @@ export default class AddForm extends React.Component {
 
 	handleAdd = (e) => {
 		let player = {...this.state}
-		
+		this.props.addNewPlayer(player)
+		e.target.reset()
 	};
 
 	render() {
@@ -40,7 +41,7 @@ export default class AddForm extends React.Component {
 						<Input label='Position' name='position' />
 					</Form.Field>
 					<Form.Field>
-						<Input label='Team Name' name='team' />
+						<Input label='Team Name' name='team_id' />
 					</Form.Field>
 					<Form.Field>
 						<Input label='Image URL' name='image' />

@@ -15,7 +15,7 @@ const PlayerCard = ({player, addLike}) => {
 				<Card.Meta>
 					<span>{player.position}</span>
 				</Card.Meta>
-				<Card.Description>{player.team}</Card.Description>
+				<Card.Description>{player.team.name}</Card.Description>
 			</Card.Content>
 			<Card.Content extra>
 				<p>
